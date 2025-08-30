@@ -1,1 +1,1 @@
-# Finger tracking app - using Camara
+# Finger tracking app - using Live Camara
