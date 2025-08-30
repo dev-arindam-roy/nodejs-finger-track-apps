@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Finger Track App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="status">Initializing camera...</div>
+    <div id="info">
+      <div id="handedness">Hand: —</div>
+      <div id="count">Fingers: 0</div>
+    </div>
+  </div>
+
+  <div class="video-wrap">
+    <video id="video" playsinline style="display:none;"></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- MediaPipe libs -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

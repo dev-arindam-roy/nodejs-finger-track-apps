@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TF.js Finger Tracker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="controls">
+    <div id="status">Loading model...</div>
+    <div class="toggles">
+      <button id="toggle-skeleton">Hide Skeleton</button>
+      <button id="toggle-multihand">Multi-hand: Off</button>
+      <button id="toggle-mirror">Mirror: Off</button>
+    </div>
+    <div id="info">
+      <div id="handedness">Hand: —</div>
+      <div id="count">Fingers: 0</div>
+    </div>
+  </div>
+
+  <div class="video-wrap">
+    <video id="video" playsinline autoplay muted></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- TensorFlow.js and hand-pose-detection -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@4.13.0/dist/tf-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl@4.13.0/dist/tf-backend-webgl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@0.0.8/dist/hand-pose-detection.min.js"></script>
+  <!-- mediapipe (used internally by the detector for the MediaPipe model runtime) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+  <!-- TensorFlow.js core -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+
+<!-- Hand pose detection model -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
+
+<!-- Optional: Camera utilities -->
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

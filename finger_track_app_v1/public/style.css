@@ -1,0 +1,83 @@
+:root{
+  --accent: #00e0a8;
+  --bg: #0b1020;
+  --panel: rgba(255,255,255,0.06);
+}
+
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial;}
+body{
+  background: linear-gradient(180deg, #071023 0%, #07122a 100%);
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  flex-direction:column;
+  padding:20px;
+}
+
+.video-wrap{
+  position:relative;
+  width: 880px;
+  max-width:95vw;
+  aspect-ratio: 16/9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border-radius: 12px;
+  overflow:hidden;
+  background: #000;
+}
+
+#canvas{
+  width:100%;
+  height:100%;
+  display:block;
+  background:#000;
+}
+
+#ui{
+  width:880px;
+  max-width:95vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+#status{
+  background:var(--panel);
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:14px;
+  color:#ddd;
+}
+
+#info{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+#handedness, #count{
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  padding:10px 14px;
+  border-radius:10px;
+  min-width:120px;
+  text-align:left;
+  font-weight:600;
+  color:var(--accent);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* make overlay text left-to-right */
+#handedness, #count { direction: ltr; unicode-bidi: isolate; }
+
+/* big number overlay inside canvas when detected */
+.finger-number {
+  position:absolute;
+  right:18px;
+  top:18px;
+  font-size:40px;
+  font-weight:700;
+  color:rgba(0,224,168,0.95);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}

@@ -1,0 +1,20 @@
+:root{
+  --accent: #00e0a8;
+  --bg: #071023;
+  --panel: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#071023 0%,#07112a 100%);color:#fff;}
+#controls{
+  width:900px;max-width:95vw;margin:14px auto 6px;display:flex;align-items:center;gap:12px;justify-content:space-between;
+}
+#status{background:var(--panel);padding:8px 12px;border-radius:8px;font-size:14px;color:#ddd}
+.toggles button{margin-right:8px;padding:8px 12px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#ddd;border-radius:8px;cursor:pointer}
+#info{display:flex;gap:10px;align-items:center}
+#handedness,#count{background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));padding:8px 12px;border-radius:8px;color:var(--accent);font-weight:700;min-width:120px}
+
+.video-wrap{width:900px;max-width:95vw;margin:0 auto;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 10px 30px rgba(0,0,0,0.6);position:relative}
+video, canvas{display:block;width:100%;height:auto}
+canvas{position:absolute;top:0;left:0}
+.overlay-number{position:absolute;left:18px;top:18px;font-size:48px;font-weight:800;color:var(--accent);text-shadow:0 4px 10px rgba(0,0,0,0.6)}
+.small-label{position:absolute;left:18px;top:76px;font-size:16px;color:#fff}
